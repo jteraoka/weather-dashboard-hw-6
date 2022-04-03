@@ -16,7 +16,7 @@ var weatherWeek = document.querySelector("#weather-week");
 
     //Geocoding API//
 function getCity(cityName) {
-    var geocodingUrl = "http://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&appid=1889c56a9f497443e1fbbe7218d7104c";
+    var geocodingUrl = "https://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&appid=1889c56a9f497443e1fbbe7218d7104c";
     fetch(geocodingUrl)
     .then(function (response) {
     return response.json();
@@ -31,7 +31,7 @@ function getCity(cityName) {
         console.log(geoArray);
 
     //Open Weather API//
-        var openWeatherURL = "http://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&units=imperial&appid=1889c56a9f497443e1fbbe7218d7104c";
+        var openWeatherURL = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&units=imperial&appid=1889c56a9f497443e1fbbe7218d7104c";
         console.log(openWeatherURL);
         fetch(openWeatherURL)
         .then(function (response) {
